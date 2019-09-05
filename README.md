@@ -12,7 +12,7 @@
 ├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
  KC_LSFT ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_ADPU ,KC_PGDN ,        KC_HOME ,KC_ADEN ,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_BKSL ,KC_RSFT ,
 ├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
- KC_CTPL ,KC_HYPR ,KC_LGUI ,KC_LALT ,     KC_SPC  ,    KC_SPC  ,KC_ENT  ,        KC_BSPC ,KC_DEL  ,    KC_SLAG,      KC_LEFT ,KC_UP   ,KC_DOWN ,KC_RGHT 
+ KC_CTPL ,KC_HYPR ,KC_LGUI ,KC_LALT ,     KC_CSPC ,    KC_SPC  ,KC_ENT  ,        KC_BSPC ,KC_DEL  ,    KC_SLAG,      KC_LEFT ,KC_UP   ,KC_DOWN ,KC_RGHT 
 └────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
 ```
 
@@ -40,9 +40,10 @@
 ├────── ─┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
  KC_ESC  ,KC_MS_L ,KC_MS_D ,KC_MS_R ,KC_WH_D ,XXXXXXX ,_______ ,                          _______ ,KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RIGHT,XXXXXXX ,XXXXXXX ,
 ├────── ─┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
- KC_LSFT ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,_______ ,        KC_MUTE ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
+ KC_LSFT ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,MENU    ,_______ ,_______ ,        KC_MUTE ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
 ├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
  KC_LGUI ,KC_HYPR ,KC_LGUI ,KC_LALT ,     KC_LCTRL,    KC_BTN1 ,KC_BTN2 ,        KC_VOLD ,KC_VOLU ,    XXXXXXX ,     KC_HOME ,KC_PGUP ,KC_PGDOWN, KC_END 
 └────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
 ```
 
+ 
