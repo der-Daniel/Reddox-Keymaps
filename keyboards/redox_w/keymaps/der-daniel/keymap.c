@@ -16,6 +16,7 @@ enum custom_keycodes {
   SYMB,
   NAV,
   ADJUST,
+  MENU,
 };
 
 // Shortcut to make keymap more readable
@@ -33,6 +34,24 @@ enum custom_keycodes {
 
 #define KC_SLAG RALT_T(KC_SLASH)
 #define KC_CSPC LCTL_T(KC_SPC)
+
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case MENU:
+      if (record->event.pressed) {
+	SEND_STRING(SS_DOWN(X_LSHIFT));
+	SEND_STRING(SS_TAP(X_F10));
+	SEND_STRING(SS_UP(X_LSHIFT));
+      } else {
+        // when keycode QMKBEST is released
+      }
+      break;
+
+  }
+  return true;
+};
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -72,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────── ─┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_ESC  ,KC_MS_L ,KC_MS_D ,KC_MS_R ,KC_WH_D ,XXXXXXX ,_______ ,                          _______ ,KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RIGHT,XXXXXXX ,XXXXXXX ,
   //├────── ─┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,_______ ,        KC_MUTE ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
+     KC_LSFT ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,MENU    ,_______ ,_______ ,        KC_MUTE ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
      KC_LGUI ,KC_HYPR ,KC_LGUI ,KC_LALT ,     KC_LCTRL,    KC_BTN1 ,KC_BTN2 ,        KC_VOLD ,KC_VOLU ,    XXXXXXX ,     KC_HOME ,KC_PGUP ,KC_PGDOWN, KC_END 
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
